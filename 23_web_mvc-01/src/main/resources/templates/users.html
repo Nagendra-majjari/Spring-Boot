@@ -28,11 +28,8 @@
 					<td th:text="${user.name}"></td>
 					<td th:text="${user.email}"></td>
 					<td th:text="${user.phno}"></td>
-					<td>
-						<a th:href="@{/edit(uid=${user.uid})}" class="btn btn-warning">Edit</a>
-						<a th:href="@{/delete(uid=${user.uid})}" class="btn btn-danger"
-							onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
-					</td>
+					<td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
+					<td><a th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>
 				</tr>
 			</tbody>
 		</table>
