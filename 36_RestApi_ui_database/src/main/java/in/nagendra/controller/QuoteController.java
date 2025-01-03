@@ -16,7 +16,7 @@ public class QuoteController {
 	@Autowired
     private QuoteService quoteService;
 	
-	@GetMapping("/quotes")
+	@GetMapping("/")
     public String getQuotes(Model model) {
         List<Quote> quotes = quoteService.fetchQuote();
         
