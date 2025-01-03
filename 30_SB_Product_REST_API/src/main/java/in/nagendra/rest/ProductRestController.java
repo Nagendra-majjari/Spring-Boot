@@ -67,8 +67,8 @@ public class ProductRestController {
 
 	
 	@GetMapping(
-			    value="/product/{pid}",
-			    produces="application/json"
+			    value="/product",
+			    produces={"application/json","application/xml",}
     )
 	public ResponseEntity<Product> getProduct(@PathVariable Integer pid) {
 

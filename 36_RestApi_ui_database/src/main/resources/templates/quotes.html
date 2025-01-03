@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Quotes</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Quotes List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Author</th>
+                <th>Quote</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="quote:${quotes}">
+                <td th:text="${quote.id}"></td>
+                <td th:text="${quote.author}"></td>
+                <td th:text="${quote.quote}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
